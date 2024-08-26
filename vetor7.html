@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Informe seu filme favorito: <br> <input type="text" id="input_filme"> <br>
+    <button onclick="filmes()">Cadastrar</button> <br>
+    <div id="div_filmes"></div>
+</body>
+
+</html>
+<script>
+    var listaFilmes = []
+    function filmes() {
+        var filme = input_filme.value
+        listaFilmes.push(filme)
+        div_filmes.innerHTML = ""
+
+        for (var i = 0; i < listaFilmes.length; i++)
+            if (i % 2 == 0){
+                div_filmes.innerHTML += `<span style="color:blue" > ${listaFilmes[i]} </span> <br>`
+            }else {
+                div_filmes.innerHTML += `<span style="color:red" > ${listaFilmes[i]} </span> <br>`
+            }
+
+    }
+</script>

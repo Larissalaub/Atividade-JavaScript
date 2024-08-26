@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP fruta</title>
+</head>
+<body>
+    Fruta <input id="input_fruta" type="text">
+    <button onclick="adicionar()">Adicionar fruta</button>
+    <div id="div_frutas"></div>
+</body>
+</html>
+<script>
+    var listasFrutas = ["maça verde", " banana"];
+    function exibir() {
+        div_frutas.innerHTML = `${listasFrutas} <br>`;
+        
+        var tamanhoVetor = listasFrutas.length;
+
+        for(var i = 0; i < tamanhoVetor; i++) {
+            var frutaAtual = listasFrutas[i];
+            div_frutas.innerHTML = `${frutaAtual} <br>`;
+        }
+    }
+    function pesquisar() {
+        var contadorMorango;
+
+        div_frutas.innerHTML = ""; 
+        for( var i = 0; i < listasFrutas.length; i++) {
+          var frutaAtual = listasFrutas.length[i];
+          if(frutaAtual == "morango") contadorMorango++;
+          div_frutas.innerHTML += `${frutaAtual} <br>`;
+            
+        }
+    }
+    function adicionar() {
+        var fruta = input_fruta.value;
+
+        listasFrutas.push(fruta);
+
+        div_frutas.innerHTML = listasFrutas;                                  
+    }
+
+</script>
