@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Inserir Cidade Natal <input id="Cidade" type="text"><BR></BR>
+    Inserir Ano do nascimento <input id="datanasc" type="date"><BR></BR>
+    <button onclick="cadastrar()">Cadastrar</button>
+</body>
+</html>
+
+<script>
+    function cadastrar() {
+        var Cidadenatal = (Cidade.value);
+        var nascimento = (datanasc.value)
+        alert ("Você Nasceu na Cidade de " + Cidadenatal  +  " em "  + nascimento);
+    }
+</script>

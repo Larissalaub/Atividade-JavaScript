@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Inserir o nome da rua/avenida/vila <input id="input_ruaavenidavila" type="text"><br>
+    Inserir numero da casa <input id="input_numerocasa" type="text"><br>
+    <button onclick="ondeeumoro()">Onde eu moro</button>
+</body>
+</html>
+<script>
+    function ondeeumoro() {
+        var rua = (input_ruaavenidavila.value);
+        var numero = (input_numerocasa.value);
+        alert ("Seu logradouro é " + rua);
+        alert ("O numero do seu logadouro é " +  numero);
+    }
+</script>

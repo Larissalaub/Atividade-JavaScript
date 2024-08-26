@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Análise da Família</title>
+    <script>
+        function analisarFamilia() {
+            var quantidadeFilhos = parseInt(document.getElementById("quantidadeFilhos").value);
+            var mensagem = "";
+
+            if (quantidadeFilhos >= 1) {
+                mensagem += "Não tem TV<br>"
+            }
+            if (quantidadeFilhos >= 2) {
+                mensagem += "Não tem internet"
+            }
+            if (quantidadeFilhos >= 3) {
+                mensagem += "Não tem video game"
+            }
+            if (quantidadeFilhos >= 4) {
+                mensagem += "Não tem Netflix"
+            }
+
+            document.getElementById("resultado").innerHTML = mensagem;
+        }
+    </script>
+</head>
+<body>
+    <h1>Análise da Família</h1>
+    <label for="quantidadeFilhos">Quantidade de filhos:</label>
+    <input type="number" id="quantidadeFilhos" name="quantidadeFilhos" min="0">
+    <button onclick="analisarFamilia()">Analisar família</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
